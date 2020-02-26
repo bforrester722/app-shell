@@ -195,6 +195,12 @@
     color: var(--app-accent-color);
   }
 
+  @media print {
+    .hide-for-printing {
+      display: none;
+    }
+  }
+
 </style>
 
 
@@ -222,7 +228,7 @@
                    narrow="{{narrow}}"
                    force-narrow=[[hideMenu]]>
   <!-- MENU DRAWER -->
-  <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
+  <app-drawer id="drawer" class="hide-for-printing" slot="drawer" swipe-open="[[narrow]]">
     <div id="make-scrollable">
       <slot id="drawer-background-slot" name="drawer-background-slot"></slot>
       <app-toolbar>Menu</app-toolbar>
