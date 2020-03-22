@@ -16,6 +16,8 @@
       color:       var(--dark-text-color);
       font-weight: bold;
     };
+    --top-toolbar-height: 64px;
+    
   }
 
   .layout {
@@ -46,6 +48,11 @@
   app-header paper-icon-button {
     --paper-icon-button-ink-color: var(--header-color);
   }
+
+  #topToolbar {
+    height: var(--top-toolbar-height);
+  }
+
 
   #drawer {
     --app-drawer-content-container: {
@@ -113,6 +120,7 @@
 
   #account-icon-container {
     position: absolute;
+    top:      12px;
     right:    16px;
   }
 
@@ -201,6 +209,7 @@
     }
   }
 
+ 
 </style>
 
 
